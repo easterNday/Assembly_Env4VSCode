@@ -1,0 +1,27 @@
+{
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "Masm Build",
+            "command": "ml.exe",
+            "args": [
+                "/c",
+                "/coff",
+                "${file}",
+                "\r\n",
+                "link",
+                "/subsystem:console",
+                "${fileDirname}\\${fileBasenameNoExtension}.obj"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always"
+            },
+            "problemMatcher": "$msCompile"
+        }
+    ],
+    "version": "2.0.0"
+}
